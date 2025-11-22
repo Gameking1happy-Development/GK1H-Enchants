@@ -41,7 +41,7 @@ side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
 modrinth = "vjOWyxXu"
-curseforge = "1384685"
+curseforge = 1384685
 [[dependencies.${ mod_id }]]
 modId = "fzzy_config"
 type = "required"
@@ -51,7 +51,7 @@ side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
 modrinth = "hYykXjDp"
-curseforge = "1005914"
+curseforge = 1005914
 [[dependencies.${ mod_id }]]
 modId = "universalenchants"
 type = "optional"
@@ -59,6 +59,8 @@ versionRange = "[${universalenchants_version},)"
 ordering = "NONE"
 side = "BOTH"
 [mc-publish]
+modrinth = "gATHIoLP"
+curseforge = 1388691
 dependencies=[
     "universalenchants@>=${universalenchants_version}(recommended){modrinth:universal-enchants}{curseforge:universal-enchants}"
     ]
