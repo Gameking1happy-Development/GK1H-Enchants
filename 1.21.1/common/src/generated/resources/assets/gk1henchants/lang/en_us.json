@@ -1,0 +1,7 @@
+{
+  "gk1henchants.server_config": "GK1H Enchants Config",
+  "gk1henchants.server_config.Enchantability": "Enchantability Changes",
+  "gk1henchants.server_config.Enchantability.desc": "Changes enchantability of items, requires Universal Enchants.",
+  "gk1henchants.server_config.Tradeable": "Tradeable Enchantments",
+  "gk1henchants.server_config.Tradeable.desc": "Enable wind burst and swift sneak being tradeable by villagers."
+}

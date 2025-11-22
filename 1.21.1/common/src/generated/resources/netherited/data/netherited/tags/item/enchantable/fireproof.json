@@ -1,0 +1,60 @@
+{
+  "values": [
+    "minecraft:diamond_horse_armor",
+    "minecraft:leather_horse_armor",
+    "minecraft:iron_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:wolf_armor",
+    "minecraft:totem_of_undying",
+    "minecraft:spyglass",
+    "minecraft:clock",
+    "minecraft:ender_chest",
+    "minecraft:soul_lantern",
+    "minecraft:lantern",
+    "minecraft:carved_pumpkin",
+    "#minecraft:arrows",
+    "#minecraft:compasses",
+    "#c:shulker_boxes",
+    "#minecraft:skulls",
+    {
+      "id": "netheriteextras:totem_of_neverdying",
+      "required": false
+    },
+    {
+      "id": "netheriteextras:netherite_horse_armor",
+      "required": false
+    },
+    {
+      "id": "netheriteextras:netherite_wolf_armor",
+      "required": false
+    },
+    {
+      "id": "linkedchests:linked_pouch",
+      "required": false
+    },
+    {
+      "id": "horseexpert:monocle",
+      "required": false
+    },
+    {
+      "id": "spikyspikes:diamond_spike",
+      "required": false
+    },
+    {
+      "id": "spikyspikes:netherite_spike",
+      "required": false
+    },
+    {
+      "id": "#moblassos:lassos",
+      "required": false
+    },
+    {
+      "id": "#travelersbackpack:custom_travelers_backpack",
+      "required": false
+    },
+    {
+      "id": "#bagofholding:bags",
+      "required": false
+    }
+  ]
+}
