@@ -1,4 +1,4 @@
-Mod with enchantment-related changes for 1.21.1 made by GK1H.
+Mod with enchantment-related changes made by GK1H.
 <h1>Features</h1>
 <h2>Tradeable Wind Burst & Swift Sneak</h2>
 Librarian villagers can give wind burst and swift sneak via trading.
