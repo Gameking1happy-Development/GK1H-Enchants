@@ -1,9 +1,8 @@
 package io.github.gameking1happy.gk1henchants.data;
 
 import io.github.gameking1happy.gk1henchants.data.client.MyLanguageProvider;
-import io.github.gameking1happy.gk1henchants.data.enchantability.EnchantabilityEnchantmentTagsProvider;
 import io.github.gameking1happy.gk1henchants.data.enchantability.EnchantabilityItemTagsProvider;
-import io.github.gameking1happy.gk1henchants.data.enchantability.netherited.enderzoology.NetheritedItemTagsProvider;
+import io.github.gameking1happy.gk1henchants.data.enchantability.netherited.NetheritedItemTagsProvider;
 import io.github.gameking1happy.gk1henchants.data.tradeable.TradeableEnchantmentTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -41,7 +40,6 @@ public class GatherDataEventSubscribe {
         generator.addProvider(event.includeServer(), new TradeableEnchantmentTagsProvider(TradeableOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new EnchantabilityItemTagsProvider(EnchantabilityOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
-        generator.addProvider(event.includeServer(), new EnchantabilityEnchantmentTagsProvider(EnchantabilityOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new NetheritedItemTagsProvider(NetheritedOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
     }
 }

@@ -36,11 +36,6 @@ public class EnchantabilityItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        tag(Tags.Items.SHULKER_BOXES)
-                .addOptionalTags(TagKey.create(Registries.ITEM, fNAP("reinfshulker","copper_shulker_boxes")), TagKey.create(Registries.ITEM, fNAP("reinfshulker","iron_shulker_boxes")), TagKey.create(Registries.ITEM, fNAP("reinfshulker","gold_shulker_boxes")), TagKey.create(Registries.ITEM, fNAP("reinfshulker","diamond_shulker_boxes")), TagKey.create(Registries.ITEM, fNAP("reinfshulker","netherite_shulker_boxes")));
-        tag(Tags.Items.ENCHANTABLES)
-                .addTags(Tags.Items.SHULKER_BOXES)
-                .addOptionalTags(TagKey.create(Registries.ITEM, fNAP("moblassos","lassos")));
         tag(ItemTags.EQUIPPABLE_ENCHANTABLE)
                 .addOptionalTags(TagKey.create(Registries.ITEM, fNAP("travelersbackpack","custom_travelers_backpack")));
         tag(ItemTags.VANISHING_ENCHANTABLE)

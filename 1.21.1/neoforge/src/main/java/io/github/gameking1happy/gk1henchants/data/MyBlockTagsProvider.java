@@ -23,7 +23,5 @@ public class MyBlockTagsProvider extends BlockTagsProvider {
         super(output, lookupProvider, MOD_ID, existingFileHelper);
     }
     @Override
-    protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        // Add your tag entries here.
-    }
+    protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {}
 }

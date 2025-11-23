@@ -1,4 +1,4 @@
-package io.github.gameking1happy.gk1henchants.data.enchantability.netherited.enderzoology;
+package io.github.gameking1happy.gk1henchants.data.enchantability.netherited;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
