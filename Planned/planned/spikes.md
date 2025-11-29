@@ -1,6 +1,0 @@
-enchants:
-minecraft:secondary_enchantable/breach
-minecraft:secondary_enchantable/impaling
-netherited:enchantable/fireproof
-enderzoology:primary_enchantable/soulbound
-minecraft:enchantable/vanishing
