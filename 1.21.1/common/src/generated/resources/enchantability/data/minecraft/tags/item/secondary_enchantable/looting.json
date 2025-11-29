@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "mutantmonsters:endersoul_hand",
+      "required": false
+    },
+    {
+      "id": "mutantmonsters:creeper_shard",
+      "required": false
+    },
+    {
+      "id": "mutantmonsters:hulk_hammer",
+      "required": false
+    },
+    {
+      "id": "illagerinvasion:platinum_infused_hatchet",
+      "required": false
+    },
+    {
+      "id": "enderzoology:hunting_bow",
+      "required": false
+    }
+  ]
+}

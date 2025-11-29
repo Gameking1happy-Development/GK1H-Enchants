@@ -7,6 +7,10 @@
     "#minecraft:enchantable/fire_aspect",
     "#c:tools/ranged_weapon",
     {
+      "id": "#netherited:enchantable/fireproof",
+      "required": false
+    },
+    {
       "id": "#c:misc_enchantables",
       "required": false
     }

@@ -4,8 +4,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -14,8 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
-import static io.github.gameking1happy.gk1hcore.Main.fNAP;
+import static io.github.gameking1happy.gk1hcore.data.CoreData.*;
 import static io.github.gameking1happy.gk1henchants.Main.MOD_ID;
+import static io.github.gameking1happy.gk1htags.registry.ItemTag.*;
+import static fuzs.universalenchants.init.ModRegistry.*;
 
 /**
  * Enchantability item tags datagen.
@@ -36,17 +38,21 @@ public class EnchantabilityItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        tag(ItemTags.EQUIPPABLE_ENCHANTABLE)
-                .addOptionalTags(TagKey.create(Registries.ITEM, fNAP("travelersbackpack","custom_travelers_backpack")));
-        tag(ItemTags.VANISHING_ENCHANTABLE)
-                .add(Items.DIAMOND_HORSE_ARMOR, Items.LEATHER_HORSE_ARMOR, Items.IRON_HORSE_ARMOR, Items.GOLDEN_HORSE_ARMOR, Items.WOLF_ARMOR, Items.TOTEM_OF_UNDYING, Items.SPYGLASS, Items.CLOCK, Items.ENDER_CHEST, Items.SOUL_LANTERN, Items.LANTERN)
-                .addTags(ItemTags.ARROWS, ItemTags.COMPASSES, Tags.Items.SHULKER_BOXES)
-                .addOptional(fNAP("netheriteextras","totem_of_neverdying"))
-                .addOptional(fNAP("netheriteextras","netherite_horse_armor"))
-                .addOptional(fNAP("netheriteextras","netherite_wolf_armor"))
-                .addOptional(fNAP("horseexpert","monocle"))
-                .addOptional(fNAP("spikyspikes","diamond_spike"))
-                .addOptional(fNAP("spikyspikes","netherite_spike"))
-                .addOptionalTags(TagKey.create(Registries.ITEM, fNAP("moblassos","lassos")), TagKey.create(Registries.ITEM, fNAP("travelersbackpack","custom_travelers_backpack")));
+        tag(ItemTags.VANISHING_ENCHANTABLE).addTags(ItemTags.EQUIPPABLE_ENCHANTABLE, ItemTags.MINING_ENCHANTABLE, ItemTags.WEAPON_ENCHANTABLE, ItemTags.FISHING_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE, Tags.Items.RANGED_WEAPON_TOOLS).addOptionalTags(NetFireproof, MiscEnchantables);
+        tag(ItemTags.EQUIPPABLE_ENCHANTABLE).add(Items.SADDLE, Items.CHEST).addTag(ItemTags.ARMOR_ENCHANTABLE).addOptionalTag(Accessories);
+        tag(ItemTags.DURABILITY_ENCHANTABLE).addOptionalTag(AnimalArmor);
+        tag(ItemTags.ARMOR_ENCHANTABLE).addTag(Tags.Items.ARMORS);
+        tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).addOptionalTag(AnimalArmor);
+        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard"));
+        tag(ItemTags.SHARP_WEAPON_ENCHANTABLE).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet"));
+        tag(Tags.Items.RANGED_WEAPON_TOOLS).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptional(fNaP("enderzoology","hunting_bow"));
+        tag(ITKC("c", "tools/ranged_weapons")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptional(fNaP("enderzoology","hunting_bow"));
+        tag(ItemTags.BOW_ENCHANTABLE).addTag(ItemTags.CROSSBOW_ENCHANTABLE);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","respiration")))).addOptionalTag(AnimalArmor);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","breach")))).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("mutantmonsters", "hulk_hammer")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptionalTag(EnchantableSpikySpikes);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","impaling")))).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("mutantmonsters", "hulk_hammer")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptionalTag(EnchantableSpikySpikes);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","looting")))).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("mutantmonsters", "hulk_hammer")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptional(fNaP("enderzoology","hunting_bow"));
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","piercing")))).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet"));
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","quick_charge")))).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet"));
     }
 }

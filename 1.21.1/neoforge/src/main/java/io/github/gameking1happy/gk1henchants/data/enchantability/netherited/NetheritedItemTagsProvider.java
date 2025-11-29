@@ -1,20 +1,17 @@
 package io.github.gameking1happy.gk1henchants.data.enchantability.netherited;
 
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import java.util.concurrent.CompletableFuture;
 
-import static io.github.gameking1happy.gk1hcore.Main.fNAP;
 import static io.github.gameking1happy.gk1henchants.Main.MOD_ID;
+import static io.github.gameking1happy.gk1htags.registry.ItemTag.*;
 
 /**
  * Netherited item tags datagen.
@@ -35,17 +32,6 @@ public class NetheritedItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        tag(TagKey.create(Registries.ITEM,fNAP("netherited","enchantable/fireproof")))
-                .addTag(Tags.Items.ENCHANTABLES)
-                .add(Items.DIAMOND_HORSE_ARMOR, Items.LEATHER_HORSE_ARMOR, Items.IRON_HORSE_ARMOR, Items.GOLDEN_HORSE_ARMOR, Items.WOLF_ARMOR, Items.TOTEM_OF_UNDYING, Items.SPYGLASS, Items.CLOCK, Items.ENDER_CHEST, Items.SOUL_LANTERN, Items.LANTERN, Items.CARVED_PUMPKIN)
-                .addTags(ItemTags.ARROWS, ItemTags.COMPASSES, Tags.Items.SHULKER_BOXES, ItemTags.SKULLS)
-                .addOptional(fNAP("netheriteextras","totem_of_neverdying"))
-                .addOptional(fNAP("netheriteextras","netherite_horse_armor"))
-                .addOptional(fNAP("netheriteextras","netherite_wolf_armor"))
-                .addOptional(fNAP("linkedchests","linked_pouch"))
-                .addOptional(fNAP("horseexpert","monocle"))
-                .addOptional(fNAP("spikyspikes","diamond_spike"))
-                .addOptional(fNAP("spikyspikes","netherite_spike"))
-                .addOptionalTags(TagKey.create(Registries.ITEM, fNAP("bagofholding","bags")));
+        tag(NetFireproof).addTags(ItemTags.EQUIPPABLE_ENCHANTABLE, ItemTags.MINING_ENCHANTABLE, ItemTags.WEAPON_ENCHANTABLE, ItemTags.FISHING_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE, Tags.Items.RANGED_WEAPON_TOOLS).addOptionalTag(MiscEnchantables);
     }
 }

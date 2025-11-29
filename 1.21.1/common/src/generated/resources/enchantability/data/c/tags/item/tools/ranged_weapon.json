@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "illagerinvasion:platinum_infused_hatchet",
+      "required": false
+    },
+    {
+      "id": "enderzoology:hunting_bow",
+      "required": false
+    }
+  ]
+}

@@ -38,6 +38,10 @@ pluginManagement {
                 includeGroupAndSubgroups('net.minecraftforge')
             }
         }
+        maven {
+            name = "Sinytra"
+            url = "https://maven.sinytra.org/"
+        }
     }
 }
 

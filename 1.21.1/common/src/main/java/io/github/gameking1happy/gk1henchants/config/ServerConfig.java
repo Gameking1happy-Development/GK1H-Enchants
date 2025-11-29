@@ -4,9 +4,13 @@ import me.fzzyhmstrs.fzzy_config.annotations.Comment;
 import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import me.fzzyhmstrs.fzzy_config.validation.misc.ValidatedBoolean;
+import me.fzzyhmstrs.fzzy_config.validation.misc.ValidatedCondition;
+import net.minecraft.network.chat.Component;
 
+import static io.github.gameking1happy.gk1hcore.compat.CompatFlags.GK1HTags;
+import static io.github.gameking1happy.gk1hcore.compat.CompatFlags.UniEnc;
 import static io.github.gameking1happy.gk1henchants.Main.MOD_ID;
-import static io.github.gameking1happy.gk1hcore.Main.fNAP;
+import static io.github.gameking1happy.gk1hcore.data.CoreData.fNaP;
 import static me.fzzyhmstrs.fzzy_config.annotations.Action.RELOG;
 
 /**
@@ -23,12 +27,12 @@ public class ServerConfig extends Config {
     /**
      * Enchantability configuration value.
      */
-    @Comment("Changes enchantability of items, requires Universal Enchants.")
-    public ValidatedBoolean Enchantability = new ValidatedBoolean(true);
+    @Comment("Changes enchantability of items. Requires Universal Enchants & GK1H Tags.")
+    public ValidatedCondition<Boolean> Enchantability = (new ValidatedBoolean(true)).toCondition(() -> UniEnc, Component.literal("Universal Enchants not loaded."), () -> false).withCondition(() -> GK1HTags, Component.literal("GK1H Tags not loaded."));
     /**
      * The constructor method.
      */
     public ServerConfig() {
-        super(fNAP(MOD_ID, "server_config"));
+        super(fNaP(MOD_ID, "server_config"));
     }
 }

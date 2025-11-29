@@ -23,6 +23,6 @@ public class MyLanguageProvider extends LanguageProvider {
         add("gk1henchants.server_config.Tradeable", "Tradeable Enchantments");
         add("gk1henchants.server_config.Tradeable.desc", "Enable wind burst and swift sneak being tradeable by villagers.");
         add("gk1henchants.server_config.Enchantability", "Enchantability Changes");
-        add("gk1henchants.server_config.Enchantability.desc", "Changes enchantability of items, requires Universal Enchants.");
+        add("gk1henchants.server_config.Enchantability.desc", "Changes enchantability of items. Requires Universal Enchants & GK1H Tags.");
     }
 }

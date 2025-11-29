@@ -1,8 +1,6 @@
 package io.github.gameking1happy.gk1henchants.client;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.minecraft.network.chat.Component;
 
 /**
  * Fabric client-side code.

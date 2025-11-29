@@ -4,7 +4,7 @@ import io.github.gameking1happy.gk1hcore.packs.AddPacks;
 import org.jetbrains.annotations.NotNull;
 
 import static io.github.gameking1happy.gk1hcore.packs.AddPackPreset.addCDP;
-import static io.github.gameking1happy.gk1hcore.platform.Services.PLATFORM;
+import static io.github.gameking1happy.gk1hcore.compat.CompatFlags.*;
 import static io.github.gameking1happy.gk1henchants.Main.*;
 
 /**
@@ -19,9 +19,9 @@ public class Packs implements AddPacks {
         if (Tradeable) {
             addCDP(modContainerOrEvent, getModID(), "tradeable");
         }
-        if (Enchantability && PLATFORM.isModLoaded("universalenchants")) {
+        if (Enchantability) {
             addCDP(modContainerOrEvent, getModID(), "enchantability");
-            if (PLATFORM.isModLoaded("netherited")) {
+            if (Neted) {
                 addCDP(modContainerOrEvent, getModID(), "netherited");
             }
         }

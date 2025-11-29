@@ -40,8 +40,8 @@ ordering = "NONE"
 side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
-modrinth = "vjOWyxXu"
-curseforge = 1384685
+modrinth = "gk1h-core"
+curseforge = "1384685"
 [[dependencies.${ mod_id }]]
 modId = "fzzy_config"
 type = "required"
@@ -50,19 +50,26 @@ ordering = "NONE"
 side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
-modrinth = "hYykXjDp"
-curseforge = 1005914
+modrinth = "fzzy-config"
+curseforge = "1005914"
+[[dependencies.${ mod_id }]]
+modId = "gk1htags"
+type = "optional"
+versionRange = "[${gk1htags_version},)"
+ordering = "AFTER"
+side = "BOTH"
 [[dependencies.${ mod_id }]]
 modId = "universalenchants"
 type = "optional"
 versionRange = "[${universalenchants_version},)"
-ordering = "NONE"
+ordering = "AFTER"
 side = "BOTH"
 [mc-publish]
-modrinth = "gATHIoLP"
-curseforge = 1388691
+modrinth = "gk1h-enchants"
+curseforge = "1388691"
 dependencies=[
-    "universalenchants@>=${universalenchants_version}(recommended){modrinth:universal-enchants}{curseforge:universal-enchants}"
+    "gk1htags@>=${gk1htags_version}(recommended){modrinth:gk1h-tags}{curseforge:1389964}",
+    "universalenchants@>=${universalenchants_version}(recommended){modrinth:universal-enchants}{curseforge:593958}"
     ]
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't

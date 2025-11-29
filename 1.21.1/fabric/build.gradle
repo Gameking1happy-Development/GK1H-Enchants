@@ -9,14 +9,27 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
     }
+    include(implementation("com.moulberry:mixinconstraints:1.1.0"))
     modImplementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
     modImplementation("me.fzzyhmstrs:fzzy_config:${fzzy_config_version}")
     modApi("io.github.gameking1happy.gk1hcore:gk1hcore-fabric-1.21.1:${gk1hcore_version}")
+    modApi("io.github.gameking1happy.gk1htags:gk1htags-fabric-1.21.1:${gk1htags_version}")
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
     modImplementation("maven.modrinth:universal-enchants:v${universalenchants_version}-1.21.1-Fabric")
-    modImplementation("maven.modrinth:ender-zoology:v${enderzoology_version}-1.21.1-Fabric")
+    modImplementation("maven.modrinth:netherite-extras:${netheriteextras_version}")
     modRuntimeOnly("fuzs.puzzleslib:puzzleslib-fabric:${puzzleslib_version}")
+    modRuntimeOnly("io.wispforest:owo-lib:${owo_version}")
+    modRuntimeOnly(("maven.modrinth:emi-enchanting:${emi_enchanting_version}"))
+    modRuntimeOnly(("maven.modrinth:emi-loot:${emi_loot_version}"))
+    modRuntimeOnly(("maven.modrinth:emi-ores:${emi_ores_version}+fabric"))
+    modRuntimeOnly(("maven.modrinth:emi-professions-(emip):${emi_professions_version}-fabric,1.21.1"))
+    modRuntimeOnly(("maven.modrinth:emixx:${emixx_version}-fabric"))
+    modRuntimeOnly(("maven.modrinth:emiffect:${emiffect_version}-fabric"))
+    modRuntimeOnly(("maven.modrinth:lmft:${lmft_version}-fabric"))
+    modRuntimeOnly(("maven.modrinth:netherited-fireproof:${netherited_version}-fabric"))
+    modRuntimeOnly("net.fabricmc:fabric-language-kotlin:1.13.7+kotlin.2.2.21")
+    modLocalRuntime("dev.emi:emi-fabric:${emi_version}")
 }
 repositories {
     maven {

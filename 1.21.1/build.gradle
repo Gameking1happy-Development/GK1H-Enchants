@@ -8,6 +8,7 @@ plugins {
 }
 subprojects {
     repositories {
+        mavenCentral()
         maven {
             name = "FzzyMaven"
             url = "https://maven.fzzyhmstrs.me/"
@@ -19,6 +20,13 @@ subprojects {
         maven {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
+        maven {
+            name = "oωo (owo-lib)"
+            url = "https://maven.wispforest.io/releases/" }
+        maven {
+            name = "TerraformersMC"
+            url = "https://maven.terraformersmc.com/"
         }
         exclusiveContent {
             forRepository {

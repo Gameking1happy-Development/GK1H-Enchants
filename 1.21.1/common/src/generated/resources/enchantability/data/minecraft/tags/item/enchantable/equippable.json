@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:saddle",
+    "minecraft:chest",
+    "#minecraft:enchantable/armor",
+    {
+      "id": "#c:accessories",
+      "required": false
+    }
+  ]
+}

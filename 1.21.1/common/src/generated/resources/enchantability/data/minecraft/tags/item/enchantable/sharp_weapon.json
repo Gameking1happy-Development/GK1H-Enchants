@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "mutantmonsters:endersoul_hand",
+      "required": false
+    },
+    {
+      "id": "mutantmonsters:creeper_shard",
+      "required": false
+    },
+    {
+      "id": "illagerinvasion:platinum_infused_hatchet",
+      "required": false
+    }
+  ]
+}

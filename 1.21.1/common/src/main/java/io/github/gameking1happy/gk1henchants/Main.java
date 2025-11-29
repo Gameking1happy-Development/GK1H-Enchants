@@ -3,14 +3,10 @@ package io.github.gameking1happy.gk1henchants;
 import io.github.gameking1happy.gk1henchants.config.ServerConfig;
 import io.github.gameking1happy.gk1henchants.packs.Packs;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static io.github.gameking1happy.gk1hcore.Main.addClass;
-import static io.github.gameking1happy.gk1hcore.Main.fNAP;
 import static io.github.gameking1happy.gk1hcore.platform.Services.PLATFORM;
 
 /**
