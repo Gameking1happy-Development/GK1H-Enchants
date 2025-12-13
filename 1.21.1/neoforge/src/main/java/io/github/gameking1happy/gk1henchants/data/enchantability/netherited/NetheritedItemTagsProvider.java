@@ -32,6 +32,6 @@ public class NetheritedItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        tag(NetFireproof).addTags(ItemTags.EQUIPPABLE_ENCHANTABLE, ItemTags.MINING_ENCHANTABLE, ItemTags.WEAPON_ENCHANTABLE, ItemTags.FISHING_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE, Tags.Items.RANGED_WEAPON_TOOLS).addOptionalTag(MiscEnchantables);
+        tag(NET_FIREPROOF).addTags(ItemTags.EQUIPPABLE_ENCHANTABLE, ItemTags.MINING_ENCHANTABLE, ItemTags.WEAPON_ENCHANTABLE, ItemTags.FISHING_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE, Tags.Items.RANGED_WEAPON_TOOLS).addOptionalTag(MISC_ENCHANTABLES);
     }
 }

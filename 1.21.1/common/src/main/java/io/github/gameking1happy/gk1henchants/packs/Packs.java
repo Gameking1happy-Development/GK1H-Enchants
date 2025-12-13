@@ -3,7 +3,7 @@ package io.github.gameking1happy.gk1henchants.packs;
 import io.github.gameking1happy.gk1hcore.packs.AddPacks;
 import org.jetbrains.annotations.NotNull;
 
-import static io.github.gameking1happy.gk1hcore.packs.AddPackPreset.addCDP;
+import static io.github.gameking1happy.gk1hcore.packs.AddPackPreset.addCdp;
 import static io.github.gameking1happy.gk1hcore.compat.CompatFlags.*;
 import static io.github.gameking1happy.gk1henchants.Main.*;
 
@@ -16,13 +16,13 @@ public class Packs implements AddPacks {
      * @param modContainerOrEvent ModContainer for Fabric, AddPackFindersEvent for NeoForge.
      */
     public void addPacks(@NotNull Object modContainerOrEvent) {
-        if (Tradeable) {
-            addCDP(modContainerOrEvent, getModID(), "tradeable");
+        if (tradeable) {
+            addCdp(modContainerOrEvent, getModID(), "tradeable");
         }
-        if (Enchantability) {
-            addCDP(modContainerOrEvent, getModID(), "enchantability");
-            if (Neted) {
-                addCDP(modContainerOrEvent, getModID(), "netherited");
+        if (enchantability) {
+            addCdp(modContainerOrEvent, getModID(), "enchantability");
+            if (NETED) {
+                addCdp(modContainerOrEvent, getModID(), "netherited");
             }
         }
     }

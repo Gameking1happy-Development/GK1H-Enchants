@@ -38,21 +38,21 @@ public class EnchantabilityItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        tag(ItemTags.VANISHING_ENCHANTABLE).addTags(ItemTags.EQUIPPABLE_ENCHANTABLE, ItemTags.MINING_ENCHANTABLE, ItemTags.WEAPON_ENCHANTABLE, ItemTags.FISHING_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE, Tags.Items.RANGED_WEAPON_TOOLS).addOptionalTags(NetFireproof, MiscEnchantables);
-        tag(ItemTags.EQUIPPABLE_ENCHANTABLE).add(Items.SADDLE, Items.CHEST).addTag(ItemTags.ARMOR_ENCHANTABLE).addOptionalTag(Accessories);
-        tag(ItemTags.DURABILITY_ENCHANTABLE).addOptionalTag(AnimalArmor);
+        tag(ItemTags.VANISHING_ENCHANTABLE).addTags(ItemTags.EQUIPPABLE_ENCHANTABLE, ItemTags.MINING_ENCHANTABLE, ItemTags.WEAPON_ENCHANTABLE, ItemTags.FISHING_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE, Tags.Items.RANGED_WEAPON_TOOLS).addOptionalTags(NET_FIREPROOF, MISC_ENCHANTABLES);
+        tag(ItemTags.EQUIPPABLE_ENCHANTABLE).add(Items.SADDLE, Items.CHEST).addTag(ItemTags.ARMOR_ENCHANTABLE).addOptionalTag(ACCESSORIES);
+        tag(ItemTags.DURABILITY_ENCHANTABLE).addOptionalTag(ANIMAL_ARMOR);
         tag(ItemTags.ARMOR_ENCHANTABLE).addTag(Tags.Items.ARMORS);
-        tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).addOptionalTag(AnimalArmor);
-        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard"));
-        tag(ItemTags.SHARP_WEAPON_ENCHANTABLE).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet"));
-        tag(Tags.Items.RANGED_WEAPON_TOOLS).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptional(fNaP("enderzoology","hunting_bow"));
-        tag(ITKC("c", "tools/ranged_weapons")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptional(fNaP("enderzoology","hunting_bow"));
+        tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).addOptionalTag(ANIMAL_ARMOR);
+        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE).addOptional(fnap("mutantmonsters", "endersoul_hand")).addOptional(fnap("mutantmonsters", "creeper_shard"));
+        tag(ItemTags.SHARP_WEAPON_ENCHANTABLE).addOptional(fnap("mutantmonsters", "endersoul_hand")).addOptional(fnap("mutantmonsters", "creeper_shard")).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet"));
+        tag(Tags.Items.RANGED_WEAPON_TOOLS).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet")).addOptional(fnap("enderzoology","hunting_bow"));
+        tag(itkc("c", "tools/ranged_weapons")).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet")).addOptional(fnap("enderzoology","hunting_bow"));
         tag(ItemTags.BOW_ENCHANTABLE).addTag(ItemTags.CROSSBOW_ENCHANTABLE);
-        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","respiration")))).addOptionalTag(AnimalArmor);
-        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","breach")))).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("mutantmonsters", "hulk_hammer")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptionalTag(EnchantableSpikySpikes);
-        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","impaling")))).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("mutantmonsters", "hulk_hammer")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptionalTag(EnchantableSpikySpikes);
-        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","looting")))).addOptional(fNaP("mutantmonsters", "endersoul_hand")).addOptional(fNaP("mutantmonsters", "creeper_shard")).addOptional(fNaP("mutantmonsters", "hulk_hammer")).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet")).addOptional(fNaP("enderzoology","hunting_bow"));
-        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","piercing")))).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet"));
-        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fNaP("minecraft","quick_charge")))).addOptional(fNaP("illagerinvasion", "platinum_infused_hatchet"));
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fnap("minecraft","respiration")))).addOptionalTag(ANIMAL_ARMOR);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fnap("minecraft","breach")))).addOptional(fnap("mutantmonsters", "endersoul_hand")).addOptional(fnap("mutantmonsters", "creeper_shard")).addOptional(fnap("mutantmonsters", "hulk_hammer")).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet")).addOptionalTag(ENCHANTABLE_SPIKY_SPIKES);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fnap("minecraft","impaling")))).addOptional(fnap("mutantmonsters", "endersoul_hand")).addOptional(fnap("mutantmonsters", "creeper_shard")).addOptional(fnap("mutantmonsters", "hulk_hammer")).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet")).addOptionalTag(ENCHANTABLE_SPIKY_SPIKES);
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fnap("minecraft","looting")))).addOptional(fnap("mutantmonsters", "endersoul_hand")).addOptional(fnap("mutantmonsters", "creeper_shard")).addOptional(fnap("mutantmonsters", "hulk_hammer")).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet")).addOptional(fnap("enderzoology","hunting_bow"));
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fnap("minecraft","piercing")))).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet"));
+        tag(getSecondaryEnchantableItemTag(ResourceKey.create(Registries.ENCHANTMENT,fnap("minecraft","quick_charge")))).addOptional(fnap("illagerinvasion", "platinum_infused_hatchet"));
     }
 }

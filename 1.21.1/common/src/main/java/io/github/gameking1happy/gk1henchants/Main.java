@@ -29,15 +29,15 @@ public class Main {
     /**
      * The server configuration for the mod.
      */
-    public static ServerConfig serverconfig = ConfigApiJava.registerAndLoadConfig(ServerConfig::new);
+    public static ServerConfig serverConfig = ConfigApiJava.registerAndLoadConfig(ServerConfig::new);
     /**
      * Tradeable configuration value.
      */
-    public static boolean Tradeable = serverconfig.Tradeable.get();
+    public static boolean tradeable = serverConfig.tradeable.get();
     /**
      * Enchantability configuration value.
      */
-    public static boolean Enchantability = serverconfig.Enchantability.get();
+    public static boolean enchantability = serverConfig.enchantability.get();
     /**
      * Common method for initializing the mod.
      */

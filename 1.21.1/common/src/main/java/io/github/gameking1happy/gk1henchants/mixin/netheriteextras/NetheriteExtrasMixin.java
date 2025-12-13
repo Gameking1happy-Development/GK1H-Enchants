@@ -21,7 +21,7 @@ public class NetheriteExtrasMixin {
     @Definition(id = "NetheriteHorseArmorItem", type = NetheriteHorseArmorItem.class)
     @Expression("registerItem('netherite_horse_armor', @(new NetheriteHorseArmorItem(?)))")
     @ModifyArg(method = "<clinit>", at = @At(value = "MIXINEXTRAS:EXPRESSION"), index = 0)
-    private static Item.Properties NetheriteHorseArmor(Item.Properties properties) {
+    private static Item.Properties netheriteHorseArmor(Item.Properties properties) {
         return properties.durability(ArmorItem.Type.BODY.getDurability(18));
     }
 }
